@@ -1,0 +1,67 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--training_model",
+                "RLHF",
+                "--clone_repo",
+                "rjx/rjxai-rlhf-v1",
+                "--model_name_or_path",
+                "rjx/rjxai-zh-llama-7b-v1",
+                "--dataset_name",
+                "rjx/ai-and-human-100",
+                "--use_auth_token",
+                "True",
+                "--use_lora",
+                "True",
+                "--max_train_samples",
+                "40"
+            ]
+        },
+        {
+            "name": "flan-t5-Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "SM_OUTPUT_DATA_DIR": "/opt/ml/output/data",
+                "SM_MODEL_DIR": "/opt/ml/model",
+                "SM_NUM_GPUS": "1"
+            },
+            "args": [
+                "--clone_repo",
+                "rjx/t5-rlhf",
+                "--epochs",
+                "1",
+                "--eval_batch_size",
+                "16",
+                "--model_name",
+                "google/flan-t5-base",
+                "--output_dir",
+                "/opt/ml/model",
+                "--read_token",
+                "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",
+                "--task_name",
+                "samsum",
+                "--dataset_name",
+                "samsum",
+                "--train_batch_size",
+                "16",
+                "--write_token",
+                "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"
+            ]
+        }
+    ]
+}

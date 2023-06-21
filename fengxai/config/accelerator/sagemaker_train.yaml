@@ -1,0 +1,20 @@
+base_job_name: example-training-v1
+distributed_type: 'NO'
+compute_environment: AMAZON_SAGEMAKER
+region: us-west-2
+iam_role_name: sagemaker_ap-southeast-2
+ec2_instance_type: ml.c5.9xlarge
+# ml.g4dn.8xlarge   1个GPU16G  $2.176
+# ml.c5.9xlarge     36C/76G    $1.836
+# ml.p3.2xlarge     1个GPU16G  $3.825
+# ml.p3dn.24xlarge
+# ml.p4d.24xlarge
+# ml.p4de.24xlarge
+profile: default
+num_machines: 1
+image_uri: 763104351884.dkr.ecr.us-west-2.amazonaws.com/pytorch-training:2.0.0-cpu-py310-ubuntu20.04-sagemaker
+# py_version: py39
+# pytorch_version: 1.13.1
+# transformers_version: 4.26.0
+# image_uri: null
+use_cpu: true

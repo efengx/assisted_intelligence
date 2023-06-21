@@ -1,0 +1,24 @@
+base_job_name: rjxai-generate-v3
+distributed_type: 'NO'
+compute_environment: AMAZON_SAGEMAKER
+region: us-west-2
+iam_role_name: sagemaker_ap-southeast-2
+ec2_instance_type: ml.g5.4xlarge 
+# ml.g4dn.4xlarge  64G  GPU/T4   $1.505
+# ml.g4dn.8xlarge  128G GPU/T4   $2.72
+# ml.c5.9xlarge    CPU/72G       $1.836
+# ml.p3.2xlarge    61G $3.825
+# ml.p3dn.24xlarge
+# ml.p4d.24xlarge
+# ml.p4de.24xlarge
+# ml.g5.2xlarge    1个GPU24G      $1.624/h
+# ml.g5.4xlarge    1个GPU24G      $1.624/h
+# ml.g5.12xlarge   4个GPU24G      $5.672      (比ml.g4dn.12xlarge快了20分钟左右)
+profile: default
+num_machines: 1
+image_uri: 763104351884.dkr.ecr.us-west-2.amazonaws.com/pytorch-training:2.0.0-cpu-py310-ubuntu20.04-sagemaker
+# py_version: py39
+# pytorch_version: 1.13.1
+# transformers_version: 4.26.0
+# image_uri: null
+use_cpu: false
