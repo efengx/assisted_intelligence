@@ -88,7 +88,7 @@ class HfSagemaker:
 		default_env={
 			'HF_MODEL_ID':'distilbert-base-uncased-distilled-squad', 	# model_id from hf.co/models
 			# 'HF_TASK':'question-answering',                           # NLP task you want to use for predictions
-			'HF_API_TOKEN': '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'
+			'HF_API_TOKEN': None
 		}
 		self._env = {**default_env, **self._env}
 

@@ -285,7 +285,7 @@ class CleanDatasetFactory:
 
         logger.info("保存到hub")
         if push_to_hub is not None:
-            # login(token="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", add_to_git_credential=True)
+            # login(token=None, add_to_git_credential=True)
             save_dataset.push_to_hub(
                 push_to_hub, 
                 private=True,
@@ -502,7 +502,7 @@ class CleanDatasetFactory:
 
         logger.info("保存到hub")
         if self.clean_dataset_args.clone_repo is not None:
-            # login(token="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", add_to_git_credential=True)
+            # login(token=None, add_to_git_credential=True)
             save_dataset.push_to_hub(
                 self.clean_dataset_args.clone_repo, 
                 private=True,

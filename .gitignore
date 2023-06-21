@@ -133,3 +133,4 @@ dmypy.json
 
 docs/
 tmp/
+.vscode/

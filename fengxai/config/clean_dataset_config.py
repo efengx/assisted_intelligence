@@ -58,7 +58,7 @@ class CleanDatasetArguments:
         },
     )
     write_hf_hub_token: Optional[str] = field(
-        default='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',
+        default=None,
         metadata={
             "help": "远程hub的写入token"
         }

@@ -60,7 +60,7 @@
                 "--train_batch_size",
                 "16",
                 "--write_token",
-                "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"
+                "None"
             ]
         }
     ]
